@@ -9,7 +9,7 @@ Script was tested using TFS 1.4, might or might not work with different versions
 2. Add `require 'data/actions/scripts/other/rituals'` at the top of *'data/actions/scripts/other/fluids.lua'*
 3. Create rituals by calling either `monsterSpawningRitualCrossPattern(itemTopLeft, itemTopRight, itemBottomLeft, itemBottomRight, bloodPosition, monster, playerActionPosition)` if you want to create a simple cross pattern ritual with blood in the middle or `monsterSpawningRitual(positionsAndItems, bloodPosition, monster, playerActionPosition)` if you want to create custom combination of items, their placements and where to spill blood at.
 
-Functions have to be called in *fluids.lua* file after line 83: `item:transform(item:getId(), 0)`. 
+Summoning functions from point 3 have to be called in *fluids.lua* file after line 83: `item:transform(item:getId(), 0)` or in case you're using TFS 1.5, after line 79: `item:transform(item:getId(), FLUID_NONE)`. 
 
 # Examples
 1. `monsterSpawningRitualCrossPattern(2472, 2470, 2471, 2646, Position(94, 126, 7), "Demon", toPosition)`
