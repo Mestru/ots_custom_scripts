@@ -39,7 +39,7 @@ stack traceback:
         data/global.lua:101: in function 'contains'
         data/actions/scripts/other/fluids.lua:66: in function <data/actions/scripts/other/fluids.lua:27>
 ```
-Your Tibia version doesn't support distilling rum.
+Your Tibia version doesn't support distilling rum and because of that it crashes the script when trying to spill fluid on the floor.
 
 **Solution**:
 In *fluids.lua* change your line 66 (or 65 if you didn't include rituals yet) from  
