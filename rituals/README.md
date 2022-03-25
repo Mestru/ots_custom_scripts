@@ -28,7 +28,7 @@ monsterSpawningRitual({
 https://user-images.githubusercontent.com/12278194/160024768-bc7be56d-6741-4021-b03e-e60a46a7c31b.mp4
 
 # Troubleshooting
-1. **Problem**: Nil issue in distillery part of fluids.lua
+**Problem**: Nil issue in distillery part of fluids.lua
 ```
 Lua Script Error: [Action Interface]
 data/actions/scripts/other/fluids.lua:onUse
@@ -40,8 +40,9 @@ stack traceback:
         data/actions/scripts/other/fluids.lua:66: in function <data/actions/scripts/other/fluids.lua:27>
 ```
 Your Tibia version doesn't support distilling rum.
+
 **Solution**:
-In *fluids.lua* change your line 66 (or 65 if you didn't include rituals yet) from
-`elseif table.contains(distillery, target.itemid) then`
-to
+In *fluids.lua* change your line 66 (or 65 if you didn't include rituals yet) from  
+`elseif table.contains(distillery, target.itemid) then`  
+to  
 `elseif distillery and table.contains(distillery, target.itemid) then`
